@@ -22,7 +22,7 @@ function showcards() {
                     class="w-full h-full object-contain" />
                 </div>
                 <div class="flex gap-2 mt-4">
-                  <h5 class="text-base font-semibold text-slate-900">${item.title}</h5>
+                  <h5 class="text-base font-semibold text-slate-900">${item.category}</h5>
                   <h6 class="text-base text-slate-900 font-bold ml-auto">$ ${item.price}</h6>
                 </div>
                 <p class="text-slate-600 text-[13px] mt-2">${item.title}</p>
