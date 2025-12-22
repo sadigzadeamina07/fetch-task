@@ -22,10 +22,10 @@ function showcards() {
                     class="w-full h-full object-contain" />
                 </div>
                 <div class="flex gap-2 mt-4">
-                  <h5 class="text-base font-semibold text-slate-900">Sole Elegance</h5>
-                  <h6 class="text-base text-slate-900 font-bold ml-auto">$10.00</h6>
+                  <h5 class="text-base font-semibold text-slate-900">${item.title}</h5>
+                  <h6 class="text-base text-slate-900 font-bold ml-auto">$ ${item.price}</h6>
                 </div>
-                <p class="text-slate-600 text-[13px] mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="text-slate-600 text-[13px] mt-2">${item.title}</p>
               </a>
               <div class="flex items-center gap-2 mt-6">
                 <div
