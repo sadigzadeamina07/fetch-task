@@ -3,29 +3,34 @@ let cards2 = document.querySelector(".cards2")
 let allproducts = []
 let allproducts2 = []
 function getdata() {
-    fetch('https://fakestoreapi.com/products')
-        .then((res) => res.json())
-        .then((data) => {
-            allproducts = data
-            showcards()
-        })
+  fetch('https://694cad62da5ddabf0037372d.mockapi.io/products')
+    .then((res) => res.json())
+    .then((data) => {
+      allproducts = data
+      showcards()
+    })
 }
 getdata()
 
 function showcards() {
-    allproducts.map((item) => {
-        cards.innerHTML += `
+  allproducts.map((item) => {
+    cards.innerHTML += `
         <div class="bg-white shadow-sm border border-gray-200 rounded-lg p-3">
               <a href="javascript:void(0)" class="block">
                 <div class="aspect-[12/11] bg-gray-100 rounded-lg p-4">
                   <img src="${item.image}" alt="Product 1"
                     class="w-full h-full object-contain" />
                 </div>
-                <div class="flex gap-2 mt-4">
-                  <h5 class="text-base font-semibold text-slate-900">${item.title}</h5>
-                  <h6 class="text-base text-slate-900 font-bold ml-auto">$ ${item.price}</h6>
-                </div>
-                <p class="text-slate-600 text-[13px] mt-2">${item.category}</p>
+            <div class="mt-4">
+  <h5 class="text-base font-semibold text-slate-900 line-clamp-1">
+    ${item.title}
+  </h5>
+  <div class="flex items-center justify-between mt-1">
+    <p class="text-slate-600 text-[13px]">${item.category}</p>
+    <h6 class="text-lg text-black font-bold">$${item.price}</h6>
+  </div>
+</div>
+                
               </a>
               <div class="flex items-center gap-2 mt-6">
                 <div
@@ -40,21 +45,21 @@ function showcards() {
               </div>
             </div>
         `
-    })
+  })
 }
 showcards()
 function getdata2() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then((res) => res.json())
-        .then((data) => {
-            allproducts2 = data
-            showcards2()
-        })
+  fetch('https://jsonplaceholder.typicode.com/users')
+    .then((res) => res.json())
+    .then((data) => {
+      allproducts2 = data
+      showcards2()
+    })
 }
 getdata2()
 function showcards2() {
-    allproducts2.map((item) => {
-        cards2.innerHTML += `
+  allproducts2.map((item) => {
+    cards2.innerHTML += `
   <div class="border border-gray-300 rounded-md overflow-hidden">
             <div class="w-full aspect-square bg-gray-50">
               <img src="https://readymadeui.com/team-1.webp" class="w-full h-full object-cover object-top" />
@@ -70,6 +75,6 @@ function showcards2() {
             </div>
           </div>
         `
-    })
+  })
 }
 showcards2()
